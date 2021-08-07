@@ -1,0 +1,20 @@
+{% extends "home.html" %}
+
+
+
+{% block content %}
+    <!-- list flights -->
+            {% for flight in flights %}
+                <p>
+                flight ID: {{ flight[0] }}<br>
+                Departing from: {{ flight[1]}}<br>
+                at: {{flight[3]}}:00<br>
+                Arriving in: {{flight[2]}}<br>
+                at: {{flight[4]}}:00<br>
+                <br>
+                Available seats: {{flight[5] - flight[6]}}
+                </p>
+            {% endfor %}
+
+
+{% endblock content %}

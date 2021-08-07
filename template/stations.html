@@ -1,0 +1,17 @@
+{% extends "home.html" %}
+
+
+
+{% block content %}
+    <!-- list flights -->
+            {% for station in stations %}
+                <p>
+                Station: {{station[0]}}<br>
+                Available Bays: {{station[1]}}<br>
+                Location: {{station[2]}}, {{station[3]}}
+                
+                </p>
+            {% endfor %}
+
+
+{% endblock content %}
